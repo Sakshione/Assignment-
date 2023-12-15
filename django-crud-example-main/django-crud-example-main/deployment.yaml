@@ -1,0 +1,19 @@
+metadata:
+  name: python-app
+  namespace: namespacename
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: python-app
+  template:
+    metadata:
+      labels:
+        app: python-app
+    spec:
+      containers:
+        - name: python-app-container
+          image: dockerimage_ name backend:latest
+          imagePullPolicy: Always 
+          ports: 
+          - containerPort: 8000
